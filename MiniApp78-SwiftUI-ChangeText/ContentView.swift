@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var message = "押してね"
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text(message)
+                .padding()
+            Button("Button") {
+                message = "押された..."
+            }
+        }
     }
 }
 
